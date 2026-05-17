@@ -25,7 +25,7 @@ function LoginPage({ onLogin }) {
 
       const { token, user } = response.data;
       onLogin(token, user);
-      navigate('/dashboard/artistes');
+       navigate('/dashboard/articles');
     } catch (err) {
       setError(err.response?.data?.message || 'Erreur de connexion. Vérifiez vos identifiants.');
     } finally {

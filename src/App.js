@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import axios from 'axios';
 import LoginPage from './pages/LoginPage';
 import DashboardLayout from './layout/DashboardLayout';
-import ArtistesPage from './pages/ArtistesPage';
+import ArticlesPage from './pages/ArticlesPage';
 import FournisseursPage from './pages/FournisseursPage';
 import './styles/App.css';
 
@@ -53,7 +53,7 @@ function App() {
         <Route 
           path="/login" 
           element={
-            isAuthenticated ? <Navigate to="/dashboard/artistes" /> : <LoginPage onLogin={handleLogin} />
+             isAuthenticated ? <Navigate to="/dashboard/articles" /> : <LoginPage onLogin={handleLogin} />
           } 
         />
         <Route
@@ -62,7 +62,7 @@ function App() {
             isAuthenticated ? (
               <DashboardLayout user={user} onLogout={handleLogout}>
                 <Routes>
-                  <Route path="artistes" element={<ArtistesPage />} />
+                   <Route path="articles" element={<ArticlesPage />} />
                   <Route path="fournisseurs" element={<FournisseursPage />} />
                 </Routes>
               </DashboardLayout>
@@ -71,7 +71,7 @@ function App() {
             )
           }
         />
-        <Route path="/" element={<Navigate to={isAuthenticated ? "/dashboard/artistes" : "/login"} />} />
+         <Route path="/" element={<Navigate to={isAuthenticated ? "/dashboard/articles" : "/login"} />} />
       </Routes>
     </Router>
   );

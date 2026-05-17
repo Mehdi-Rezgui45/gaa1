@@ -5,14 +5,14 @@ import '../styles/Sidebar.css';
 function Sidebar({ open, onToggle }) {
   const location = useLocation();
 
-  const menuItems = [
-    { label: 'Tableau de Bord', path: '/dashboard/artistes', icon: '📊' },
-    { label: 'Artistes', path: '/dashboard/artistes', icon: '🎭' },
-    { label: 'Fournisseurs', path: '/dashboard/fournisseurs', icon: '🏢' },
-    { label: 'Commandes', path: '/dashboard/commandes', icon: '📋' },
-    { label: 'Rapports', path: '/dashboard/rapports', icon: '📈' },
-    { label: 'Paramètres', path: '/dashboard/parametres', icon: '⚙️' },
-  ];
+    const menuItems = [
+      { label: 'Tableau de Bord', path: '/dashboard/articles', icon: '📊' },
+      { label: 'Articles', path: '/dashboard/articles', icon: '📦' },
+      { label: 'Fournisseurs', path: '/dashboard/fournisseurs', icon: '🏢' },
+      { label: 'Commandes', path: '/dashboard/commandes', icon: '📋' },
+      { label: 'Rapports', path: '/dashboard/rapports', icon: '📈' },
+      { label: 'Paramètres', path: '/dashboard/parametres', icon: '⚙️' },
+    ];
 
   return (
     <div className={`sidebar ${open ? 'open' : 'closed'}`}>
